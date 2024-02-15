@@ -10,7 +10,7 @@ Will need to install GraalVM version or just the plain JDK 21 if not interested 
 Goto start.spring.io and then do the following
 - Pick Project: Maven
 - Pick Language: Java
-- Pick Version: Boot 3.2.2
+- Pick Version: Boot 3.2.1 (latest as the time of this writing)
 - Pick Jar
 - Pick Java 21
 - Add dependencies
@@ -63,7 +63,8 @@ java -jar target/spring-intro-1.0.jar
 This method uses Cloud Native buildpacks to build the boot application and generates a docker image
 
 ```
-./mvnw clean spring-boot:build-image -Dspring-boot.build-image.imageName=spring/intro:1.0
+./mvnw clean spring-boot:build-image \
+    -Dspring-boot.build-image.imageName=spring/intro:1.0
 ```
 
 ... then run it
@@ -91,7 +92,9 @@ target/spring-intro
 For this to work, there is no need to have GraalVM, just a regular JDK. The native compilation happens inside a buildpack
 
 ```
-./mvnw -Pnative spring-boot:build-image -Dspring-boot.build-image.imageName=spring/intro-native:1.0
+./mvnw clean spring-boot:build-image \
+    -Pnative \
+    -Dspring-boot.build-image.imageName=spring/intro-native:1.0
 ```
 
 ... then run it
