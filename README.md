@@ -103,7 +103,7 @@ For this to work, there is no need to have GraalVM, just a regular JDK. The nati
 docker run --rm -it -p 8080:8080 spring/intro-native:1.0
 ```
 
-## Stats
+## Metrics
 
 | Native / JVM | Docker | Compile Time (s) | Startup Time (s) | Memory Usage (MB) |
 | --------- | --------- | --------- | ---------- | --------- |
