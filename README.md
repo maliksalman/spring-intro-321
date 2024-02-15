@@ -18,8 +18,7 @@ Goto start.spring.io and then do the following
     - jdbc
     - native
     - h2
-    - lombok
-
+    - 
 ## Unzip the project
 Unzip and run `mvnw clean package` to ensure the project compiles
 
@@ -27,10 +26,10 @@ Unzip and run `mvnw clean package` to ensure the project compiles
 IntelliJ or VS Code will both work. Lets also cleanup some stuff that will slow us down in this demo.
 
 - Cleanup the `src/test/java`
-- Remove the testing depdendencies
+- Remove the testing dependencies
 - Set the version of app to `1.0`
 
-## Lets add some code
+## Let's add some code
 
 We will create a simple API to create/list/lookup super-heroes. The API will be backed with a Database 
 
@@ -38,7 +37,9 @@ We will create a simple API to create/list/lookup super-heroes. The API will be 
 
 Turn on virtual threads
 
-## Run the app
+## Run the app - Lots of choices
+
+Spring Boot makes it really easy to run your app during development and there are lots of packaging options for running in production.
 
 ### Through the IDE
 
